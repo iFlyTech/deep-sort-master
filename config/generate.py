@@ -4,4 +4,5 @@ Parses commmand line arguments for generate.py
 
 import argparse
 
-parser = argparse.Argu
+parser = argparse.ArgumentParser()
+parser.add_argument("--name", typ
