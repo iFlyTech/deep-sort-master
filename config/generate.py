@@ -6,4 +6,4 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--name", type=str, help="the name of the dataset (e.g. train, val, test)")
-parser.add_ar
+parser.add_argument("--size", type=int, help="size of the datase
