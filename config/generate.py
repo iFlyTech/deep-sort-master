@@ -9,4 +9,4 @@ parser.add_argument("--name", type=str, help="the name of the dataset (e.g. trai
 parser.add_argument("--size", type=int, help="size of the dataset to generate")
 parser.add_argument("--max_val", type=int, help="the maximum value in an array")
 parser.add_argument("--min_length", type=int, help="the min size of array")
-parser.add_argument("--m
+parser.add_argument("--max_length", type=int, help="the max size 
