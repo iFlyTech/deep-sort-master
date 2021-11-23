@@ -15,4 +15,6 @@ parser.add_argument("--ewc", action="store_true", help="generate sequence of dat
 
 def get_config():
     """
-   
+    Get command line arguments.
+    """
+    return 
