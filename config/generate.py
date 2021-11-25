@@ -17,4 +17,4 @@ def get_config():
     """
     Get command line arguments.
     """
-    return 
+    return parser.parse_known_args()
