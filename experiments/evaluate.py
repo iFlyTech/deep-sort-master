@@ -13,4 +13,7 @@ from utils import load_checkpoint, device, RANDOM_SEED
 
 def run():
     """
-    Run th
+    Run the experiment.
+    """
+    is_ptr = True
+    np.r
