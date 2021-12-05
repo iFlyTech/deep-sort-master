@@ -16,4 +16,5 @@ def run():
     Run the experiment.
     """
     is_ptr = True
-    np.r
+    np.random.seed(RANDOM_SEED)
+    max_val, max_le
