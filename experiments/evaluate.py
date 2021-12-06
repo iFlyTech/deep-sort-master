@@ -17,4 +17,4 @@ def run():
     """
     is_ptr = True
     np.random.seed(RANDOM_SEED)
-    max_val, max_le
+    max_val, max_length, pairs = read_data(name="test")
