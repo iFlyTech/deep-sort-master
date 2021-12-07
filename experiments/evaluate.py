@@ -18,3 +18,5 @@ def run():
     is_ptr = True
     np.random.seed(RANDOM_SEED)
     max_val, max_length, pairs = read_data(name="test")
+    np.random.shuffle(pairs)
+    tr
