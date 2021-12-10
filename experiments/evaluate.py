@@ -22,4 +22,6 @@ def run():
     training_pairs = [tensors_from_pair(pair) for pair in pairs]
 
     data_dim = max_val + 1
-    hidden_dim
+    hidden_dim = embedding_dim = 256
+
+    encoder = Encoder(in
