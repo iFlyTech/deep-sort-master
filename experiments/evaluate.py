@@ -24,4 +24,5 @@ def run():
     data_dim = max_val + 1
     hidden_dim = embedding_dim = 256
 
-    encoder = Encoder(in
+    encoder = Encoder(input_dim=data_dim,
+                      emb
