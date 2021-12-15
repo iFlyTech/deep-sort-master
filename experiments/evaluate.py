@@ -29,4 +29,5 @@ def run():
                       hidden_dim=hidden_dim).to(device)
     if is_ptr:
         decoder = PtrDecoder(output_dim=data_dim,
-            
+                             embedding_dim=embedding_dim,
+         
