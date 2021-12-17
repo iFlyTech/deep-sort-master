@@ -30,4 +30,6 @@ def run():
     if is_ptr:
         decoder = PtrDecoder(output_dim=data_dim,
                              embedding_dim=embedding_dim,
-                             hidden_dim=h
+                             hidden_dim=hidden_dim).to(device)
+    else:
+        decod
