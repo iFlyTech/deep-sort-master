@@ -32,4 +32,5 @@ def run():
                              embedding_dim=embedding_dim,
                              hidden_dim=hidden_dim).to(device)
     else:
-        decod
+        decoder = AttnDecoder(output_dim=data_dim,
+         
