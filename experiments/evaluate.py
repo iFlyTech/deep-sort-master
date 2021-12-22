@@ -34,4 +34,6 @@ def run():
     else:
         decoder = AttnDecoder(output_dim=data_dim,
                               embedding_dim=embedding_dim,
-                              hidden_
+                              hidden_dim=hidden_dim).to(device)
+
+    checkp
