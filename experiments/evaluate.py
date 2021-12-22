@@ -36,4 +36,4 @@ def run():
                               embedding_dim=embedding_dim,
                               hidden_dim=hidden_dim).to(device)
 
-    checkp
+    checkpoint = load_checkpoint("ptr" if is
