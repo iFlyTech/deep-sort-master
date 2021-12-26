@@ -38,4 +38,5 @@ def run():
 
     checkpoint = load_checkpoint("ptr" if is_ptr else "vanilla")
     if checkpoint:
-        encoder.load_state_dict(ch
+        encoder.load_state_dict(checkpoint["encoder"])
+        decoder.loa
