@@ -41,4 +41,4 @@ def run():
         encoder.load_state_dict(checkpoint["encoder"])
         decoder.load_state_dict(checkpoint["decoder"])
     else:
- 
+        print("Count not find checkpoint 
