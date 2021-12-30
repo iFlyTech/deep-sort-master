@@ -44,4 +44,4 @@ def run():
         print("Count not find checkpoint file.")
 
     for i in range(10):
-        input_t
+        input_tensor, target_tensor = training_pairs
