@@ -46,4 +46,5 @@ def run():
     for i in range(10):
         input_tensor, target_tensor = training_pairs[i]
         output_tensor = evaluate(encoder=encoder,
-                                 d
+                                 decoder=decoder,
+                          
