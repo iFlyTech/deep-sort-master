@@ -47,4 +47,6 @@ def run():
         input_tensor, target_tensor = training_pairs[i]
         output_tensor = evaluate(encoder=encoder,
                                  decoder=decoder,
-                                 input_tensor=training_pairs[i][0]
+                                 input_tensor=training_pairs[i][0],
+                                 is_ptr=is_ptr)
+ 
