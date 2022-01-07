@@ -49,4 +49,4 @@ def run():
                                  decoder=decoder,
                                  input_tensor=training_pairs[i][0],
                                  is_ptr=is_ptr)
-        print(list(np.asarray(input_tensor.
+        print(list(np.asarray(input_tensor.data).squeeze()), output_tensor[:-1])
