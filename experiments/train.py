@@ -41,3 +41,28 @@ def run():
     training_pairs = [tensors_from_pair(pair) for pair in pairs]
 
     data_dim = max_val + 1
+    encoder = Encoder(input_dim=data_dim,
+                      embedding_dim=embedding_dim,
+                      hidden_dim=hidden_dim).to(device)
+    if is_ptr:
+        decoder = PtrDecoder(output_dim=data_dim,
+                             embedding_dim=embedding_dim,
+                             hidden_dim=hidden_dim).to(device)
+    else:
+        decoder = AttnDecoder(output_dim=data_dim,
+                              embedding_dim=embedding_dim,
+                              hidden_dim=hidden_dim).to(device)
+
+    train(encoder=encoder,
+          decoder=decoder,
+          optim=optimizer,
+          optim_params=optimizer_params,
+          weight_init=weight_init,
+          grad_clip=grad_clip,
+          is_ptr=True,
+          training_pairs=training_pairs,
+          n_epochs=n_epochs,
+          teacher_force_ratio=teacher_force_ratio,
+          print_every=50,
+          plot_every=50,
+          save_every=100)
