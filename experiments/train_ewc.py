@@ -11,4 +11,6 @@ from train_ewc import train
 from utils import device, set_max_length
 
 
-de
+def weight_init(module):
+    """
+    Initia
