@@ -13,4 +13,4 @@ from utils import device, set_max_length
 
 def weight_init(module):
     """
-    Initia
+    Initialize weights of <module>. Applied recursivly over mode
