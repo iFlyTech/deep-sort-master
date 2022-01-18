@@ -13,4 +13,6 @@ from utils import device, set_max_length
 
 def weight_init(module):
     """
-    Initialize weights of <module>. Applied recursivly over mode
+    Initialize weights of <module>. Applied recursivly over model weights via .apply()
+    """
+    for para
