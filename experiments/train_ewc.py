@@ -16,4 +16,9 @@ def weight_init(module):
     Initialize weights of <module>. Applied recursivly over model weights via .apply()
     """
     for parameter in module.parameters():
-        nn.init.uni
+        nn.init.uniform_(parameter, -0.08, 0.08)
+
+
+def run():
+    """
+    Run
