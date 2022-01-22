@@ -21,4 +21,6 @@ def weight_init(module):
 
 def run():
     """
-    Run
+    Run the experiment.
+    """
+    max_val, max_le
