@@ -23,4 +23,5 @@ def run():
     """
     Run the experiment.
     """
-    max_val, max_le
+    max_val, max_length, tasks = read_data(name="ewc",
+    
