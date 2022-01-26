@@ -25,4 +25,4 @@ def run():
     """
     max_val, max_length, tasks = read_data(name="ewc",
                                            ewc=True)
-    tasks = [[tensors_from_pair
+    tasks = [[tensors_from_pair(pair) for pair in pairs] for pairs in tasks
