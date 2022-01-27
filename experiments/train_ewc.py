@@ -29,4 +29,5 @@ def run():
 
     set_max_length(max_length)
 
-    d
+    data_dim = max_val + 1
+    hidden_dim = em
