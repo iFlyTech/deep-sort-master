@@ -30,4 +30,5 @@ def run():
     set_max_length(max_length)
 
     data_dim = max_val + 1
-    hidden_dim = em
+    hidden_dim = embedding_dim = 256
+    encoder = Encoder(inp
