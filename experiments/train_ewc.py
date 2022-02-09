@@ -33,4 +33,5 @@ def run():
     hidden_dim = embedding_dim = 256
     encoder = Encoder(input_dim=data_dim,
                       embedding_dim=embedding_dim,
-                      hidde
+                      hidden_dim=hidden_dim).to(device)
+    decoder = PtrDec
