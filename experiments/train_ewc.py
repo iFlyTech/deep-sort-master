@@ -34,4 +34,5 @@ def run():
     encoder = Encoder(input_dim=data_dim,
                       embedding_dim=embedding_dim,
                       hidden_dim=hidden_dim).to(device)
-    decoder = PtrDec
+    decoder = PtrDecoder(output_dim=data_dim,
+                      
