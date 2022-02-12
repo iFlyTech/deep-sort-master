@@ -35,4 +35,5 @@ def run():
                       embedding_dim=embedding_dim,
                       hidden_dim=hidden_dim).to(device)
     decoder = PtrDecoder(output_dim=data_dim,
-                      
+                         embedding_dim=embedding_dim,
+                         h
