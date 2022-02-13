@@ -37,4 +37,6 @@ def run():
     decoder = PtrDecoder(output_dim=data_dim,
                          embedding_dim=embedding_dim,
                          hidden_dim=hidden_dim).to(device)
-    n_epochs
+    n_epochs = 1
+    grad_clip = 2
+    teacher_force_ratio
