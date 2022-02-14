@@ -39,4 +39,6 @@ def run():
                          hidden_dim=hidden_dim).to(device)
     n_epochs = 1
     grad_clip = 2
-    teacher_force_ratio
+    teacher_force_ratio = 0.5
+    optimizer = optim.Adam
+    op
