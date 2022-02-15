@@ -41,4 +41,7 @@ def run():
     grad_clip = 2
     teacher_force_ratio = 0.5
     optimizer = optim.Adam
-    op
+    optimizer_params = {}
+
+    train(encoder=encoder,
+     
