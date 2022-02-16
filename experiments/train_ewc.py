@@ -46,4 +46,6 @@ def run():
     train(encoder=encoder,
           decoder=decoder,
           optim=optimizer,
-          optim_params=optimizer_p
+          optim_params=optimizer_params,
+          importance=1,
+          wei
