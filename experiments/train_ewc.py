@@ -49,4 +49,5 @@ def run():
           optim_params=optimizer_params,
           importance=1,
           weight_init=weight_init,
-          grad_
+          grad_clip=grad_clip,
+          is_ptr=True,
