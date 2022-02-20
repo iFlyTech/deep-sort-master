@@ -48,4 +48,5 @@ def run():
           optim=optimizer,
           optim_params=optimizer_params,
           importance=1,
-          wei
+          weight_init=weight_init,
+          grad_
