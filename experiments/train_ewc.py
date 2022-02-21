@@ -51,3 +51,5 @@ def run():
           weight_init=weight_init,
           grad_clip=grad_clip,
           is_ptr=True,
+          tasks=tasks,
+          n_epoc
