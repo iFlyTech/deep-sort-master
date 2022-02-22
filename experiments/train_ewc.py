@@ -52,4 +52,5 @@ def run():
           grad_clip=grad_clip,
           is_ptr=True,
           tasks=tasks,
-          n_epoc
+          n_epochs=n_epochs,
+          teacher_forc
