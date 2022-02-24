@@ -54,4 +54,5 @@ def run():
           tasks=tasks,
           n_epochs=n_epochs,
           teacher_force_ratio=teacher_force_ratio,
-        
+          print_every=50,
+          plot_every=
