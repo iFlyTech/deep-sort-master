@@ -53,4 +53,5 @@ def run():
           is_ptr=True,
           tasks=tasks,
           n_epochs=n_epochs,
-          teacher_forc
+          teacher_force_ratio=teacher_force_ratio,
+        
