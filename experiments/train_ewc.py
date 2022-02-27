@@ -55,4 +55,5 @@ def run():
           n_epochs=n_epochs,
           teacher_force_ratio=teacher_force_ratio,
           print_every=50,
-          plot_every=
+          plot_every=50,
+          save_every=500)
