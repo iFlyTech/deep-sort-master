@@ -26,3 +26,13 @@ def nondecreasing(a):
     """
     Returns # of pairs of elements of a not in nondecreasing order.
     """
+    incorrect = 0
+    for i in range(len(a) - 1):
+        if a[i] > a[i+1]:
+            incorrect += 1
+    return incorrect
+
+
+if __name__ == "__main__":
+    from tests.metrics import run_tests
+    run_tests()
