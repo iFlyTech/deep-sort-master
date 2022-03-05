@@ -1,4 +1,4 @@
 """
 The attention decoder model.
 
-Modified from https://pytorch.org/tutoria
+Modified from https://pytorch.org/tutorials/intermediate/seq2seq_translation_
