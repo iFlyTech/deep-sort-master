@@ -10,4 +10,6 @@ import torch.nn.functional as F
 from utils import device, MAX_LENGTH
 
 
-# noinspection PyUnresolvedReferences,PyShadowing
+# noinspection PyUnresolvedReferences,PyShadowingBuiltins
+class AttnDecoder(nn.Module):
+ 
