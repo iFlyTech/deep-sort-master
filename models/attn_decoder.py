@@ -5,4 +5,6 @@ Modified from https://pytorch.org/tutorials/intermediate/seq2seq_translation_tut
 """
 import torch
 import torch.nn as nn
-import torch.nn.functional 
+import torch.nn.functional as F
+
+from utils import device, MAX_LENGT
