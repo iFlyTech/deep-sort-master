@@ -7,4 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from utils import device, MAX_LENGT
+from utils import device, MAX_LENGTH
+
+
+# noinspection PyUnresolvedReferences,PyShadowing
