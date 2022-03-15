@@ -12,4 +12,5 @@ from utils import device, MAX_LENGTH
 
 # noinspection PyUnresolvedReferences,PyShadowingBuiltins
 class AttnDecoder(nn.Module):
-    """A decoder in seq2seq model using 
+    """A decoder in seq2seq model using a gated recurrent unit (GRU) and attention.
+   
