@@ -15,4 +15,6 @@ class AttnDecoder(nn.Module):
     """A decoder in seq2seq model using a gated recurrent unit (GRU) and attention.
     """
 
-    def __init__(self, output_di
+    def __init__(self, output_dim,
+                 embedding_dim,
+  
