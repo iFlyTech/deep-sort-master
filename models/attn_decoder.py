@@ -17,4 +17,5 @@ class AttnDecoder(nn.Module):
 
     def __init__(self, output_dim,
                  embedding_dim,
-  
+                 hidden_dim,
+                 num_laye
