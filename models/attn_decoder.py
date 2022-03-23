@@ -20,4 +20,5 @@ class AttnDecoder(nn.Module):
                  hidden_dim,
                  num_layers=1,
                  dropout=0.1,
-        
+                 max_length=MAX_LENGTH):
+        sup
