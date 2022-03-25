@@ -22,4 +22,5 @@ class AttnDecoder(nn.Module):
                  dropout=0.1,
                  max_length=MAX_LENGTH):
         super(AttnDecoder, self).__init__()
-        self.
+        self.output_dim = output_dim
+        self.hi
