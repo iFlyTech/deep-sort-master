@@ -24,4 +24,6 @@ class AttnDecoder(nn.Module):
         super(AttnDecoder, self).__init__()
         self.output_dim = output_dim
         self.hidden_dim = hidden_dim
-        self.max_le
+        self.max_length = max_length
+
+        self.embedding = nn.
