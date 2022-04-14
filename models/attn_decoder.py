@@ -28,4 +28,5 @@ class AttnDecoder(nn.Module):
 
         self.embedding = nn.Embedding(num_embeddings=self.output_dim,
                                       embedding_dim=embedding_dim)
-        self.attn = nn.Linear(in_featur
+        self.attn = nn.Linear(in_features=self.hidden_dim + embedding_dim,
+                     
