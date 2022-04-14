@@ -27,4 +27,5 @@ class AttnDecoder(nn.Module):
         self.max_length = max_length
 
         self.embedding = nn.Embedding(num_embeddings=self.output_dim,
-                                   
+                                      embedding_dim=embedding_dim)
+       
