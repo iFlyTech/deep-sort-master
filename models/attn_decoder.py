@@ -31,4 +31,5 @@ class AttnDecoder(nn.Module):
         self.attn = nn.Linear(in_features=self.hidden_dim + embedding_dim,
                               out_features=self.max_length)
         self.attn_combine = nn.Linear(in_features=self.hidden_dim + embedding_dim,
+                                      out_features=self.hidden_dim)
         
