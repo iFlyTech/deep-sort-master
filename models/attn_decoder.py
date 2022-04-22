@@ -33,4 +33,5 @@ class AttnDecoder(nn.Module):
         self.attn_combine = nn.Linear(in_features=self.hidden_dim + embedding_dim,
                                       out_features=self.hidden_dim)
         self.dropout = nn.Dropout(dropout)
-        self.lstm = nn.LSTM(input_size=self.hidd
+        self.lstm = nn.LSTM(input_size=self.hidden_dim,
+                            hidden_size=self.hid
