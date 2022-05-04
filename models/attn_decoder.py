@@ -35,4 +35,5 @@ class AttnDecoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.lstm = nn.LSTM(input_size=self.hidden_dim,
                             hidden_size=self.hidden_dim,
-                            num_
+                            num_layers=num_layers)
+        self.out = nn.Linear(in_f
