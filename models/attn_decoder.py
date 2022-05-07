@@ -37,4 +37,4 @@ class AttnDecoder(nn.Module):
                             hidden_size=self.hidden_dim,
                             num_layers=num_layers)
         self.out = nn.Linear(in_features=self.hidden_dim,
-  
+                             out_features=self.ou
