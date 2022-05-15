@@ -39,4 +39,6 @@ class AttnDecoder(nn.Module):
         self.out = nn.Linear(in_features=self.hidden_dim,
                              out_features=self.output_dim)
 
-    def forward(self, input, hidde
+    def forward(self, input, hidden, encoder_outputs):
+        """
+       
