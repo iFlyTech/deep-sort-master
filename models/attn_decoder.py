@@ -43,4 +43,5 @@ class AttnDecoder(nn.Module):
         """
         The forward pass of the decoder.
         """
-        # pad encoder outputs with 0s so that always has length <self.max_l
+        # pad encoder outputs with 0s so that always has length <self.max_length>
+        encoder_outputs = F.pad(encoder_o
