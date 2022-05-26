@@ -42,4 +42,5 @@ class AttnDecoder(nn.Module):
     def forward(self, input, hidden, encoder_outputs):
         """
         The forward pass of the decoder.
-  
+        """
+        # pad encoder outputs with 0s so th
