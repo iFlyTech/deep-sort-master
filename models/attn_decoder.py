@@ -46,4 +46,5 @@ class AttnDecoder(nn.Module):
         # pad encoder outputs with 0s so that always has length <self.max_length>
         encoder_outputs = F.pad(encoder_outputs, (0, 0, 0, self.max_length - len(encoder_outputs)))
 
-        embedded = self.embedding(inpu
+        embedded = self.embedding(input).view(1, 1, -1)
+        embedded = self.
