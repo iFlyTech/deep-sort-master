@@ -53,4 +53,6 @@ class AttnDecoder(nn.Module):
         attn_applied = torch.bmm(attn_weights.unsqueeze(0), encoder_outputs.unsqueeze(0))
         attn_combine = self.attn_combine(torch.cat((embedded[0], attn_applied[0]), 1)).unsqueeze(0)
 
-        output, hidden = s
+        output, hidden = self.lstm(F.relu(attn_combine), hidden)
+
+ 
