@@ -51,4 +51,6 @@ class AttnDecoder(nn.Module):
 
         attn_weights = F.softmax(self.attn(torch.cat((embedded[0], torch.squeeze(hidden[0], dim=0)), 1)), dim=1)
         attn_applied = torch.bmm(attn_weights.unsqueeze(0), encoder_outputs.unsqueeze(0))
-        attn_combine = self.attn_combine(torch.cat((embedded[0], att
+        attn_combine = self.attn_combine(torch.cat((embedded[0], attn_applied[0]), 1)).unsqueeze(0)
+
+        output, hidden = s
