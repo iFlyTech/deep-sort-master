@@ -56,4 +56,6 @@ class AttnDecoder(nn.Module):
         output, hidden = self.lstm(F.relu(attn_combine), hidden)
 
         output = F.log_softmax(self.out(output[0]), dim=1)
-        return output, hidden, attn
+        return output, hidden, attn_weights
+
+    def init_hidde
