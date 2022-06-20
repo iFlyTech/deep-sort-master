@@ -60,4 +60,6 @@ class AttnDecoder(nn.Module):
 
     def init_hidden(self):
         """
-        Initialize the hidden sta
+        Initialize the hidden state of the decoder.
+        """
+        return torch.z
