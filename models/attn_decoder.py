@@ -58,4 +58,6 @@ class AttnDecoder(nn.Module):
         output = F.log_softmax(self.out(output[0]), dim=1)
         return output, hidden, attn_weights
 
-    def init_hidde
+    def init_hidden(self):
+        """
+        Initialize the hidden sta
