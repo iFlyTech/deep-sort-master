@@ -62,4 +62,4 @@ class AttnDecoder(nn.Module):
         """
         Initialize the hidden state of the decoder.
         """
-        return torch.z
+        return torch.zeros(1, 1, self.hidden_dim, device=devic
