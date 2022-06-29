@@ -8,4 +8,5 @@ from utils import device
 
 
 # ignore that parameter <input> for <forward()> shadows built-in keyword input
-#
+# noinspection PyShadowingBuiltins
+class Encoder(nn.Mo
