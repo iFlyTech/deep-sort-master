@@ -2,4 +2,6 @@
 A simple encoder in the seq2seq model using a LSTM.
 """
 import torch
-impo
+import torch.nn as nn
+
+from utils import devic
