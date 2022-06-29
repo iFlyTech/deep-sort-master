@@ -7,4 +7,5 @@ import torch.nn as nn
 from utils import device
 
 
-# ignore that parameter <input> for <forwa
+# ignore that parameter <input> for <forward()> shadows built-in keyword input
+#
