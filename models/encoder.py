@@ -11,4 +11,6 @@ from utils import device
 # noinspection PyShadowingBuiltins
 class Encoder(nn.Module):
     """
-    A simple en
+    A simple encoder in the seq2seq model using a LSTM.
+    """
+    
