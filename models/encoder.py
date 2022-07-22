@@ -14,4 +14,6 @@ class Encoder(nn.Module):
     A simple encoder in the seq2seq model using a LSTM.
     """
     def __init__(self, input_dim,
-                 embeddi
+                 embedding_dim,
+                 hidden_dim,
+        
