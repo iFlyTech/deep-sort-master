@@ -16,4 +16,5 @@ class Encoder(nn.Module):
     def __init__(self, input_dim,
                  embedding_dim,
                  hidden_dim,
-        
+                 num_layers=1):
+        super(
