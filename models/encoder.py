@@ -21,4 +21,5 @@ class Encoder(nn.Module):
         self.hidden_dim = hidden_dim
 
         self.embedding = nn.Embedding(num_embeddings=input_dim,
-                                      embedding_dim=embedd
+                                      embedding_dim=embedding_dim)
+        self.lstm = nn.LSTM(in
