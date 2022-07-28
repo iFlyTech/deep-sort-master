@@ -18,4 +18,6 @@ class Encoder(nn.Module):
                  hidden_dim,
                  num_layers=1):
         super(Encoder, self).__init__()
-        self.hidden_
+        self.hidden_dim = hidden_dim
+
+        self.embedding = nn.Embe
