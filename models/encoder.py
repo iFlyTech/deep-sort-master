@@ -17,4 +17,5 @@ class Encoder(nn.Module):
                  embedding_dim,
                  hidden_dim,
                  num_layers=1):
-        super(
+        super(Encoder, self).__init__()
+        self.hidden_
