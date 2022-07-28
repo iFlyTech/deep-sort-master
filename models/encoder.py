@@ -20,4 +20,5 @@ class Encoder(nn.Module):
         super(Encoder, self).__init__()
         self.hidden_dim = hidden_dim
 
-        self.embedding = nn.Embe
+        self.embedding = nn.Embedding(num_embeddings=input_dim,
+         
