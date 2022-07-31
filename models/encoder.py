@@ -24,4 +24,6 @@ class Encoder(nn.Module):
                                       embedding_dim=embedding_dim)
         self.lstm = nn.LSTM(input_size=embedding_dim,
                             hidden_size=hidden_dim,
-                     
+                            num_layers=num_layers)
+
+    def forw
