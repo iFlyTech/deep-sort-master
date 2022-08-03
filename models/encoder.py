@@ -28,3 +28,4 @@ class Encoder(nn.Module):
 
     def forward(self, input, hidden):
         """
+        The forward pass of the e
