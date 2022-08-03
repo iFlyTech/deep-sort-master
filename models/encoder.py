@@ -26,4 +26,5 @@ class Encoder(nn.Module):
                             hidden_size=hidden_dim,
                             num_layers=num_layers)
 
-    def forw
+    def forward(self, input, hidden):
+        """
