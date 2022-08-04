@@ -38,4 +38,4 @@ class Encoder(nn.Module):
         """
         Initialize the weights of the encoder.
         """
-        return (torch.zeros(1, 1, self.hidden_dim, device=devic
+        return (torch.zeros(1, 1, self.hidden_dim, device=device), torch.zeros(1, 1, self.hidden_dim, device=device))
