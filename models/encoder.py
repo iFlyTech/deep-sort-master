@@ -35,3 +35,5 @@ class Encoder(nn.Module):
         return output, hidden
 
     def init_hidden(self):
+        """
+        Initialize the weights 
