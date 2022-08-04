@@ -32,4 +32,6 @@ class Encoder(nn.Module):
         """
         embedded = self.embedding(input).view(1, 1, -1)
         output, hidden = self.lstm(embedded, hidden)
-      
+        return output, hidden
+
+    def init_hidden(self):
