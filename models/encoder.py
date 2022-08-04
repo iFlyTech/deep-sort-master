@@ -30,4 +30,5 @@ class Encoder(nn.Module):
         """
         The forward pass of the encoder.
         """
-        embedded = self.
+        embedded = self.embedding(input).view(1, 1, -1)
+        outpu
