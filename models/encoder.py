@@ -36,4 +36,6 @@ class Encoder(nn.Module):
 
     def init_hidden(self):
         """
-        Initialize the weights 
+        Initialize the weights of the encoder.
+        """
+        return (torch.
