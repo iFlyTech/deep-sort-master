@@ -31,4 +31,5 @@ class Encoder(nn.Module):
         The forward pass of the encoder.
         """
         embedded = self.embedding(input).view(1, 1, -1)
-        outpu
+        output, hidden = self.lstm(embedded, hidden)
+      
