@@ -45,3 +45,26 @@ class PtrDecoder(nn.Module):
 
         # feed input through embedding, dropout, and LSTM cell to get new hidden state
         embedded = self.embedding(input).view(1, 1, -1)
+        embedded = self.dropout(embedded)
+        output, hidden = self.lstm(embedded, hidden)
+
+        # concatenate to get context vector (this can probably be done more efficiently)
+        # use hidden[0] = hidden state, in contrast to hidden[1] = cell state
+        stacked_hidden = torch.squeeze(torch.stack([hidden[0] for _ in range(length)]))
+        context = torch.cat((encoder_outputs, stacked_hidden), dim=1)
+
+        attn_weights = F.log_softmax(self.out(F.tanh(self.attn(context))), dim=0)
+
+        # convert log probability vector over inputs to log probability vector over all possible outputs
+        # outputs not present in output have probability 0, so log probability of -inf
+        output = torch.full((self.output_dim,), float("-inf"))
+        for i in range(len(attn_weights)):
+            output[encoder_inputs[i]] = attn_weights[i]
+
+        return torch.unsqueeze(output, 0), hidden, attn_weights
+
+    def init_hidden(self):
+        """
+        Initialize the hidden state of the decoder.
+        """
+        return torch.zeros(1, 1, self.hidden_dim, device=device)
