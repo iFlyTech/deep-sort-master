@@ -1,4 +1,5 @@
 """
 Tests for metrics.py module.
 """
-from metri
+from metrics import is_permutation, nondecreasing
+
