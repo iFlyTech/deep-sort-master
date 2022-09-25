@@ -9,4 +9,5 @@ def test_permutation():
     assert not is_permutation(a, b)
     a, b = [1, 2, 3, 4], [1, 2, 3, 4]
     assert is_permutation(a, b)
-    a, b = [4, 3, 2, 1
+    a, b = [4, 3, 2, 1], [1, 2, 3, 4]
+    assert is_permutation(a, b
