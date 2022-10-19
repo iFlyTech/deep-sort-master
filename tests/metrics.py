@@ -14,4 +14,7 @@ def test_permutation():
     a, b = [1, 3, 2, 4], [3, 2, 4, 1]
     assert is_permutation(a, b)
     a, b = [1, 1, 1, 2], [1, 2, 2, 2]
-    assert not is_pe
+    assert not is_permutation(a, b)
+
+
+def test_nondecrea
