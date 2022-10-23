@@ -17,4 +17,6 @@ def test_permutation():
     assert not is_permutation(a, b)
 
 
-def test_nondecrea
+def test_nondecreasing():
+    a = [1, 2, 3, 4]
+    assert
