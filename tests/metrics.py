@@ -19,4 +19,5 @@ def test_permutation():
 
 def test_nondecreasing():
     a = [1, 2, 3, 4]
-    assert
+    assert nondecreasing(a) == 0
+    a = [1, 1
