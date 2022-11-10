@@ -31,3 +31,7 @@ def test_nondecreasing():
 
 
 def run_tests():
+    """
+    Run all tests.
+    """
+ 
