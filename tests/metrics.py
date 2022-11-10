@@ -26,4 +26,8 @@ def test_nondecreasing():
     assert nondecreasing(a) == 1
     a = [1, 3, 2, 4]
     assert nondecreasing(a) == 1
-    a = [1, 4, 3
+    a = [1, 4, 3, 2]
+    assert nondecreasing(a) == 2
+
+
+def run_tests():
