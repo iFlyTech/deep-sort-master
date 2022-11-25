@@ -34,4 +34,6 @@ def run_tests():
     """
     Run all tests.
     """
+    print("Test permutation")
+    test_permutation()
  
