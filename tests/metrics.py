@@ -36,4 +36,5 @@ def run_tests():
     """
     print("Test permutation")
     test_permutation()
- 
+    print("Test nondecreasing")
+    test_nondecreasing
