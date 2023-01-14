@@ -11,4 +11,7 @@ import torch
 import torch.nn as nn
 
 from utils import device, SOS_token, EOS_token, time_since, save_checkpoint, load_checkpoint, RANDOM_SEED
-from visual
+from visual import show_plot
+
+
+# surpress warning of math.
