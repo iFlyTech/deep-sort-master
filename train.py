@@ -14,4 +14,4 @@ from utils import device, SOS_token, EOS_token, time_since, save_checkpoint, loa
 from visual import show_plot
 
 
-# surpress warning of math.
+# surpress warning of math.floor() returning a float. In Python 3 re
