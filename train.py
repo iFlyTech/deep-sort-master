@@ -19,4 +19,6 @@ from visual import show_plot
 def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr, training_pairs, n_epochs,
           teacher_force_ratio, print_every, plot_every, save_every):
     """
-    The training
+    The training loop.
+    """
+    np.random.seed(RAN
