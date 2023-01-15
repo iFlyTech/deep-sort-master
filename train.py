@@ -16,4 +16,5 @@ from visual import show_plot
 
 # surpress warning of math.floor() returning a float. In Python 3 returns it returns an int.
 # noinspection PyTypeChecker
-def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr, training_pairs, n_epo
+def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr, training_pairs, n_epochs,
+          teacher_force_ratio, print_every
