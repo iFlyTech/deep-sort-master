@@ -24,3 +24,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
     np.random.seed(RANDOM_SEED), torch.manual_seed(RANDOM_SEED)
     encoder.train(), decoder.train()
     encoder_optim = optim(encoder.parameters(), **optim_params)
+    decoder_optim = optim(decoder.parame
