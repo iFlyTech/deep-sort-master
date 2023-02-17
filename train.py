@@ -26,4 +26,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
     encoder_optim = optim(encoder.parameters(), **optim_params)
     decoder_optim = optim(decoder.parameters(), **optim_params)
 
-    checkpoint = load_checkpoi
+    checkpoint = load_checkpoint("ptr" if is_ptr else "vanilla")
+    if check
