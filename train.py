@@ -29,4 +29,6 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
     checkpoint = load_checkpoint("ptr" if is_ptr else "vanilla")
     if checkpoint:
         start_epoch = checkpoint["epoch"]
-        first_iter = checkpoint["ite
+        first_iter = checkpoint["iter"]
+        plot_losses = checkpoint["plot_losses"]
+   
