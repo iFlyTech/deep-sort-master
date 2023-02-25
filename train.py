@@ -31,4 +31,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         start_epoch = checkpoint["epoch"]
         first_iter = checkpoint["iter"]
         plot_losses = checkpoint["plot_losses"]
-   
+        print_loss_total = checkpoint["print_
