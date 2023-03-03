@@ -36,4 +36,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         encoder.load_state_dict(checkpoint["encoder"])
         decoder.load_state_dict(checkpoint["decoder"])
         encoder_optim.load_state_dict(checkpoint["encoder_optim"])
-        decoder_optim.lo
+        decoder_optim.load_state_dict(checkpoint["decoder_optim"])
