@@ -40,3 +40,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
     else:
         start_epoch = 0
         first_iter = 0
+        plot_losses = []
+        p
