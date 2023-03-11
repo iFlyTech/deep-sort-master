@@ -41,4 +41,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         start_epoch = 0
         first_iter = 0
         plot_losses = []
-        p
+        print_loss_total = 0  # Reset every print_every
+   
