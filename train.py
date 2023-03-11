@@ -43,4 +43,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         plot_losses = []
         print_loss_total = 0  # Reset every print_every
         plot_loss_total = 0  # Reset every plot_every
-        encoder.apply(weight_init)  # init
+        encoder.apply(weight_init)  # initialize weights
+        decoder.apply(wei
