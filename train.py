@@ -46,4 +46,6 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         encoder.apply(weight_init)  # initialize weights
         decoder.apply(weight_init)  # initialize weights
 
-    criterio
+    criterion = nn.NLLLoss()
+
+    size, n_iters = len(tra
