@@ -49,4 +49,6 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
     criterion = nn.NLLLoss()
 
     size, n_iters = len(training_pairs), n_epochs * len(training_pairs)
-    current_iter = start_epoch * siz
+    current_iter = start_epoch * size + first_iter
+    start = time.time()
+    for epoch in ra
