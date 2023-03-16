@@ -52,4 +52,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
     current_iter = start_epoch * size + first_iter
     start = time.time()
     for epoch in range(start_epoch, n_epochs):
-        np.random.shu
+        np.random.shuffle(training_pairs)
+        start_iter = first_iter
