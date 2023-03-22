@@ -55,4 +55,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         np.random.shuffle(training_pairs)
         start_iter = first_iter if epoch == start_epoch else 0
         for i in range(start_iter, size):
-            loss = train_step(training_pairs[i], encoder, deco
+            loss = train_step(training_pairs[i], encoder, decoder, encoder_optim, decoder_optim, is_ptr, crite
