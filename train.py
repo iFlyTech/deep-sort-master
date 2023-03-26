@@ -59,4 +59,6 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                               teacher_force_ratio, grad_clip)
             print_loss_total += loss
             plot_loss_total += loss
- 
+            current_iter += 1
+
+            i
