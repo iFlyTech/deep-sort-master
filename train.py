@@ -57,4 +57,6 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
         for i in range(start_iter, size):
             loss = train_step(training_pairs[i], encoder, decoder, encoder_optim, decoder_optim, is_ptr, criterion,
                               teacher_force_ratio, grad_clip)
-            print_loss
+            print_loss_total += loss
+            plot_loss_total += loss
+ 
