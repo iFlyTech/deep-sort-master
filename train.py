@@ -62,4 +62,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
             current_iter += 1
 
             if current_iter % print_every == 0:
-                
+                print_loss_avg, print_loss_total = print_loss_total /
