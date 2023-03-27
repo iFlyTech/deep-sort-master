@@ -61,4 +61,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
             plot_loss_total += loss
             current_iter += 1
 
-            i
+            if current_iter % print_every == 0:
+                
