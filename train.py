@@ -63,4 +63,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
 
             if current_iter % print_every == 0:
                 print_loss_avg, print_loss_total = print_loss_total / print_every, 0
-                print('%s 
+                print('%s (epoch: %d iter: %d %d%%) %.4f' % (time_s
