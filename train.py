@@ -68,4 +68,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                                                              current_iter / n_iters * 100,
                                                              print_loss_avg))
 
-            if current
+            if current_iter % plot_every == 0:
+           
