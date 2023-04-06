@@ -70,4 +70,4 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
 
             if current_iter % plot_every == 0:
                 plot_loss_avg, plot_loss_total = plot_loss_total / plot_every, 0
-          
+                plot_losses.append(plot_loss_a
