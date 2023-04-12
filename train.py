@@ -72,4 +72,6 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                 plot_loss_avg, plot_loss_total = plot_loss_total / plot_every, 0
                 plot_losses.append(plot_loss_avg)
 
-            if current_iter % save_eve
+            if current_iter % save_every == 0:
+                if i + 1 < size:
+ 
