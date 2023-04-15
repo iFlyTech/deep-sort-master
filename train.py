@@ -77,4 +77,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                     save_epoch = epoch
                     save_iter = i + 1
                 else:
-            
+                    save_epoch = epoch + 1
+          
