@@ -80,4 +80,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                     save_epoch = epoch + 1
                     save_iter = 0
                 save_checkpoint({
-                    "epoch": sa
+                    "epoch": save_epoch,
+                    "iter": save_i
