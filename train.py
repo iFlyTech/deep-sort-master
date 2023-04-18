@@ -83,4 +83,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                     "epoch": save_epoch,
                     "iter": save_iter,
                     "plot_losses": plot_losses,
-                    "print_loss_total":
+                    "print_loss_total": print_loss_total,
+                    "plot_
