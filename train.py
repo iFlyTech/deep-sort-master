@@ -86,4 +86,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                     "print_loss_total": print_loss_total,
                     "plot_loss_total": plot_loss_total,
                     "encoder": encoder.state_dict(),
-                
+                    "decoder": decoder.state_dict(),
+         
