@@ -91,4 +91,7 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
                     "decoder_optim": decoder_optim.state_dict(),
                 }, "ptr" if is_ptr else "vanilla")
 
-    show
+    show_plot(plot_losses, save=True)
+
+
+# ignore noncal
