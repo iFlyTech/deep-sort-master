@@ -95,4 +95,5 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
 
 
 # ignore noncallable/unresolvedreferences errors for torch.tensor, torch.unsqueeze respectively (bug in PyTorch)
-# noinspection PyCallingNonCallable,PyUnresolvedReferen
+# noinspection PyCallingNonCallable,PyUnresolvedReferences
+def train_step(training_pair
