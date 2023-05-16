@@ -98,4 +98,8 @@ def train(encoder, decoder, optim, optim_params, weight_init, grad_clip, is_ptr,
 # noinspection PyCallingNonCallable,PyUnresolvedReferences
 def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is_ptr, criterion, teacher_force_ratio,
                grad_clip):
-    ""
+    """
+    One step in the training loop.
+    """
+
+    e
