@@ -102,4 +102,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     One step in the training loop.
     """
 
-    e
+    encoder_hidden = encoder.init_hidden()
+    encoder
