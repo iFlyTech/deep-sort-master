@@ -105,4 +105,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     encoder_hidden = encoder.init_hidden()
     encoder_optim.zero_grad(), decoder_optim.zero_grad()
 
-    l
+    loss = 0
+    input_tensor, target_tensor = t
