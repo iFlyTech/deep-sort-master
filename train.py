@@ -106,4 +106,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     encoder_optim.zero_grad(), decoder_optim.zero_grad()
 
     loss = 0
-    input_tensor, target_tensor = t
+    input_tensor, target_tensor = training_pair
+    input_length, target_length = 
