@@ -107,4 +107,6 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
 
     loss = 0
     input_tensor, target_tensor = training_pair
-    input_length, target_length = 
+    input_length, target_length = input_tensor.size(0), target_tensor.size(0)
+
+  
