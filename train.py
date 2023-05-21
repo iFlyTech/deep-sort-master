@@ -109,4 +109,4 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     input_tensor, target_tensor = training_pair
     input_length, target_length = input_tensor.size(0), target_tensor.size(0)
 
-  
+    encoder_outputs = torch.zeros(input_length, e
