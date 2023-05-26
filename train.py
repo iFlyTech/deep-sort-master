@@ -112,4 +112,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     encoder_outputs = torch.zeros(input_length, encoder.hidden_dim, device=device)
 
     for i in range(input_length):
-        encoder_output, encoder_hidden = encoder(input
+        encoder_output, encoder_hidden = encoder(input_tensor[i], encoder_hidden)
+        encoder_outp
