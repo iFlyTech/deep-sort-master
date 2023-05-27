@@ -115,4 +115,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
         encoder_output, encoder_hidden = encoder(input_tensor[i], encoder_hidden)
         encoder_outputs[i] = encoder_output[0, 0]
 
-    decoder_input, decoder_hidden = torch.tensor([[SOS_tok
+    decoder_input, decoder_hidden = torch.tensor([[SOS_token]], device=device), encoder_hidden
+
