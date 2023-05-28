@@ -117,3 +117,4 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
 
     decoder_input, decoder_hidden = torch.tensor([[SOS_token]], device=device), encoder_hidden
 
+    teacher_force = random.random() < teache
