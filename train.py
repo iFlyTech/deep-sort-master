@@ -122,4 +122,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     for i in range(target_length):
         args = (decoder_input, decoder_hidden, encoder_outputs)
         if is_ptr:
-        
+            args += (input_tensor,)
+        decoder
