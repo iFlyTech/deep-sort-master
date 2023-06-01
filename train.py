@@ -124,4 +124,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
         if is_ptr:
             args += (input_tensor,)
         decoder_output, decoder_hidden, _ = decoder(*args)
-        if no
+        if not teacher_force:
+            topv, topi = decoder_output.
