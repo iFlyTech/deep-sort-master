@@ -125,4 +125,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
             args += (input_tensor,)
         decoder_output, decoder_hidden, _ = decoder(*args)
         if not teacher_force:
-            topv, topi = decoder_output.
+            topv, topi = decoder_output.topk(1)
+            # detach from history as
