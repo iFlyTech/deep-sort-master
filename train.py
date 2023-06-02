@@ -127,4 +127,6 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
         if not teacher_force:
             topv, topi = decoder_output.topk(1)
             # detach from history as input
-            decoder_input = t
+            decoder_input = topi.squeeze().detach()
+        else:
+         
