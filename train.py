@@ -129,4 +129,5 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
             # detach from history as input
             decoder_input = topi.squeeze().detach()
         else:
-         
+            decoder_input = target_tensor[i]
+ 
