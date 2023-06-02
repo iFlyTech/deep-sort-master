@@ -130,4 +130,4 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
             decoder_input = topi.squeeze().detach()
         else:
             decoder_input = target_tensor[i]
- 
+        loss += criterion(decoder_output, target_ten
