@@ -138,4 +138,4 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     loss.backward()
 
     # clip gradients (to avoid exploding gradients)
-    nn.utils.c
+    nn.utils.clip_grad_norm_(encoder.parameters(), g
