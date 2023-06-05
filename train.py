@@ -140,4 +140,7 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     # clip gradients (to avoid exploding gradients)
     nn.utils.clip_grad_norm_(encoder.parameters(), grad_clip), nn.utils.clip_grad_norm(decoder.parameters(), grad_clip)
 
-    encoder_optim.
+    encoder_optim.step()
+    decoder_optim.step()
+
+    r
