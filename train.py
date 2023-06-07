@@ -143,4 +143,4 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
     encoder_optim.step()
     decoder_optim.step()
 
-    r
+    return loss.item() / target_length
