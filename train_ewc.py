@@ -65,3 +65,52 @@ def train(encoder, decoder, optim, optim_params, importance, weight_init, grad_c
                 current_iter += 1
 
                 if current_iter % print_every == 0:
+                    print_loss_avg, print_loss_total = print_loss_total / print_every, 0
+                    print('%s (task: %d epoch: %d iter: %d %d%%) %.4f' % (time_since(start, current_iter / n_iters),
+                                                                          task, epoch, i + 1,
+                                                                          current_iter / n_iters * 100,
+                                                                          print_loss_avg))
+
+                if current_iter % plot_every == 0:
+                    plot_loss_avg, plot_loss_total = plot_loss_total / plot_every, 0
+                    plot_losses.append(plot_loss_avg)
+
+                if current_iter % save_every == 0:
+                    if i + 1 < size:
+                        save_task = task
+                        save_epoch = epoch
+                        save_iter = i + 1
+                    else:
+                        save_iter = 0
+                        if epoch + 1 < n_epochs:
+                            save_task = task
+                            save_epoch = epoch + 1
+                        else:
+                            save_task = task + 1
+                            save_epoch = 0
+                    save_checkpoint({
+                        "task": save_task,
+                        "epoch": save_epoch,
+                        "iter": save_iter,
+                        "plot_losses": plot_losses,
+                        "print_loss_total": print_loss_total,
+                        "plot_loss_total": plot_loss_total,
+                        "encoder": encoder.state_dict(),
+                        "decoder": decoder.state_dict(),
+                        "encoder_optim": encoder_optim.state_dict(),
+                        "decoder_optim": decoder_optim.state_dict(),
+                    }, "ewc_ptr" if is_ptr else "ewc_vanilla")
+
+
+# ignore warning that torch.tensor is not callable (bug in PyTorch)
+# noinspection PyCallingNonCallable
+def train_step(training_pair, tasks, encoder, decoder, encoder_optim, decoder_optim, is_ptr, criterion, importance,
+               teacher_force_ratio, grad_clip):
+    """
+    One step in the training loop.
+    """
+    encoder_hidden = encoder.init_hidden()
+    encoder_optim.zero_grad(), decoder_optim.zero_grad()
+
+    loss = 0
+    input_tensor, target_tensor = training_pair
