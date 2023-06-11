@@ -114,3 +114,41 @@ def train_step(training_pair, tasks, encoder, decoder, encoder_optim, decoder_op
 
     loss = 0
     input_tensor, target_tensor = training_pair
+    input_length, target_length = input_tensor.size(0), target_tensor.size(0)
+
+    encoder_outputs = torch.zeros(input_length, encoder.hidden_dim, device=device)
+
+    for i in range(input_length):
+        encoder_output, encoder_hidden = encoder(input_tensor[i], encoder_hidden)
+        encoder_outputs[i] = encoder_output[0, 0]
+
+    decoder_input, decoder_hidden = torch.tensor([[SOS_token]], device=device), encoder_hidden
+
+    teacher_force = random.random() < teacher_force_ratio
+
+    for i in range(target_length):
+        args = (decoder_input, decoder_hidden, encoder_outputs)
+        if is_ptr:
+            args += (input_tensor,)
+        decoder_output, decoder_hidden, _ = decoder(*args)
+        if not teacher_force:
+            topv, topi = decoder_output.topk(1)
+            # detach from history as input
+            decoder_input = topi.squeeze().detach()
+        else:
+            decoder_input = target_tensor[i]
+
+        loss += criterion(decoder_output, target_tensor[i]) + importance * get_loss(tasks, encoder, decoder, is_ptr)
+
+        if not teacher_force and decoder_input.item() == EOS_token:
+            break
+
+    loss.backward()
+
+    # clip gradients (to avoid exploding gradients)
+    nn.utils.clip_grad_norm_(encoder.parameters(), grad_clip), nn.utils.clip_grad_norm(decoder.parameters(), grad_clip)
+
+    encoder_optim.step()
+    decoder_optim.step()
+
+    return loss.item() / target_length
