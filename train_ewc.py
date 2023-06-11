@@ -152,3 +152,39 @@ def train_step(training_pair, tasks, encoder, decoder, encoder_optim, decoder_op
     decoder_optim.step()
 
     return loss.item() / target_length
+
+
+# noinspection PyCallingNonCallable,PyUnresolvedReferences
+def get_loss(tasks, encoder, decoder, is_ptr):
+    """
+    Returns loss function for previous tasks
+    """
+    precision_matrices, means = {}, {}
+    encoder_params = {n: p for n, p in encoder.named_parameters() if p.requires_grad}
+    decoder_params = {n: p for n, p in decoder.named_parameters() if p.requires_grad}
+    params = {**encoder_params, **decoder_params}
+    for n, p in deepcopy(params).items():
+        means[n] = Variable(p.data)
+        p.data.zero_()
+        precision_matrices[n] = Variable(p.data)
+
+    criterion = nn.NLLLoss()
+    for training_pairs in tasks:
+        for training_pair in training_pairs:
+            encoder_hidden = encoder.init_hidden()
+            encoder.zero_grad(), decoder.zero_grad()
+
+            input_tensor, target_tensor = training_pair
+            input_length, target_length = input_tensor.size(0), target_tensor.size(0)
+
+            encoder_outputs = torch.zeros(input_length, encoder.hidden_dim, device=device)
+
+            for i in range(input_length):
+                encoder_output, encoder_hidden = encoder(input_tensor[i], encoder_hidden)
+                encoder_outputs[i] = encoder_output[0, 0]
+
+            decoder_input, decoder_hidden = torch.tensor([[SOS_token]], device=device), encoder_hidden
+
+            decoded_output = []
+            for i in range(target_length):
+                args = (decoder_input, decoder_hidden, encoder_outputs)
