@@ -188,3 +188,33 @@ def get_loss(tasks, encoder, decoder, is_ptr):
             decoded_output = []
             for i in range(target_length):
                 args = (decoder_input, decoder_hidden, encoder_outputs)
+                if is_ptr:
+                    args += (input_tensor,)
+                decoder_output, decoder_hidden, _ = decoder(*args)
+                topv, topi = decoder_output.topk(1)
+                decoded_output.append(topi.item())
+                if topi.item() == EOS_token:
+                    break
+                # detach from history as input
+                decoder_input = topi.squeeze().detach()
+            decoded_output = torch.Tensor(decoded_output)
+            loss = criterion(torch.unsqueeze(decoded_output, 1), target_tensor)
+            loss.backward()
+
+            for n, p in encoder.named_parameters():
+                precision_matrices[n].data += p.grad.data ** 2 / (len(tasks) * len(training_pairs))
+            for n, p in decoder.named_parameters():
+                precision_matrices[n].data += p.grad.data ** 2 / (len(tasks) * len(training_pairs))
+
+    precision_matrices = {n: p for n, p in precision_matrices.items()}
+
+    loss = 0
+
+    for n, p in encoder.named_parameters():
+        _loss = precision_matrices[n] * (p - means[n]) ** 2
+        loss += _loss.sum()
+    for n, p in decoder.named_parameters():
+        _loss = precision_matrices[n] * (p - means[n]) ** 2
+        loss += _loss.sum()
+
+    return loss
