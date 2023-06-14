@@ -81,3 +81,6 @@ def load_checkpoint(model):
                     argmax_file = file_name
             except (ValueError, AttributeError):
                 print("A file other than a checkpoint appears to be in the checkpoints folder; please remove it")
+        if max_epoch >= 0 and max_iteration >= 0:
+            print("Loading checkpoint file...")
+            return torch.load(os.path.join(root_dir, argmax_file))
