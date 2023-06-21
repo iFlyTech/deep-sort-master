@@ -4,4 +4,4 @@ This project offers an advanced learning system that sorts numbers using a seq2s
 
 ## Getting Started
 
-To get started, first i
+To get started, first install all prerequisites by running `pip ins
