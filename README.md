@@ -6,4 +6,8 @@ This project offers an advanced learning system that sorts numbers using a seq2s
 
 To get started, first install all prerequisites by running `pip install -r requirements.txt` .
 
-Next, generate the necessary data using [`generate.py`](gener
+Next, generate the necessary data using [`generate.py`](generate.py).
+
+## Training
+
+Train your models by se
