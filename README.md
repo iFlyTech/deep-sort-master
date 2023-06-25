@@ -10,4 +10,4 @@ Next, generate the necessary data using [`generate.py`](generate.py).
 
 ## Training
 
-Train your models by se
+Train your models by setting the appropriate parameters in [expe
