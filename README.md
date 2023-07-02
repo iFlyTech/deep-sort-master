@@ -10,4 +10,8 @@ Next, generate the necessary data using [`generate.py`](generate.py).
 
 ## Training
 
-Train your models by setting the appropriate parameters in [experiments/train.py](https://github.com/iFlyTech/deep-sort-master/blob/master/experiments/train.py). Call the train.run() method within [main.py](https://github.com/iFlyTech/deep-sort-master/blob/master/main.py), and finally execute `python 
+Train your models by setting the appropriate parameters in [experiments/train.py](https://github.com/iFlyTech/deep-sort-master/blob/master/experiments/train.py). Call the train.run() method within [main.py](https://github.com/iFlyTech/deep-sort-master/blob/master/main.py), and finally execute `python main.py`.
+
+## Evaluation
+
+Once t
