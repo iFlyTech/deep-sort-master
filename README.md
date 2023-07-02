@@ -14,4 +14,4 @@ Train your models by setting the appropriate parameters in [experiments/train.py
 
 ## Evaluation
 
-Once the model is trained, generate a test set u
+Once the model is trained, generate a test set using [generate.py](https://github.com/iFly
