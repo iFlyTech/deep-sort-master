@@ -14,4 +14,4 @@ Train your models by setting the appropriate parameters in [experiments/train.py
 
 ## Evaluation
 
-Once the model is trained, generate a test set using [generate.py](https://github.com/iFlyTech/deep-sort-master/blob/master/generate.py) and run [experiments/evaluate.py](https://github.com/iFlyTech/deep-sort-master/blob/master/exp
+Once the model is trained, generate a test set using [generate.py](https://github.com/iFlyTech/deep-sort-master/blob/master/generate.py) and run [experiments/evaluate.py](https://github.com/iFlyTech/deep-sort-master/blob/master/experiments/evaluate.py) to evaluate the mode
