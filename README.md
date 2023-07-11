@@ -18,4 +18,4 @@ Once the model is trained, generate a test set using [generate.py](https://githu
 
 ## Reproducing Results
 
-To repr
+To reproduce our results, run [experiments/reproduce.py
