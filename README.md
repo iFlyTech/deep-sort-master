@@ -20,4 +20,6 @@ Once the model is trained, generate a test set using [generate.py](https://githu
 
 To reproduce our results, run [experiments/reproduce.py]() through `python main.py`.
 
-## Known Issue
+## Known Issues & Improvements
+
+For known issues and potenti
