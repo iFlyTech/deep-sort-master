@@ -22,4 +22,4 @@ To reproduce our results, run [experiments/reproduce.py]() through `python main.
 
 ## Known Issues & Improvements
 
-For known issues and potenti
+For known issues and potential areas for improvement, please visit 
