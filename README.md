@@ -22,4 +22,6 @@ To reproduce our results, run [experiments/reproduce.py]() through `python main.
 
 ## Known Issues & Improvements
 
-For known issues and potential areas for improvement, please visit our [Issues](https://github.com/iFlyTech/de
+For known issues and potential areas for improvement, please visit our [Issues](https://github.com/iFlyTech/deep-sort-master/issues) page.
+
+## Acknowledge
