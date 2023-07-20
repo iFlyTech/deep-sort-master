@@ -24,4 +24,6 @@ To reproduce our results, run [experiments/reproduce.py]() through `python main.
 
 For known issues and potential areas for improvement, please visit our [Issues](https://github.com/iFlyTech/deep-sort-master/issues) page.
 
-## Acknowledge
+## Acknowledgements
+
+This codebase derives cert
