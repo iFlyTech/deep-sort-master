@@ -27,3 +27,4 @@ For known issues and potential areas for improvement, please visit our [Issues](
 ## Acknowledgements
 
 This codebase derives certain portions (as indicated) from the following sources:
+* [PyTorch seq2seq tutorial](https://pytorch
