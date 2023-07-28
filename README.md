@@ -30,4 +30,4 @@ This codebase derives certain portions (as indicated) from the following sources
 * [PyTorch seq2seq tutorial](https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)
 *  [PyTorch checkpoints](https://github.com/pytorch/examples/blob/master/imagenet/main.py)
 * [Elastic Weight Consolidation](https://github.com/moskomule/ewc.pytorch)
-* [Pointer Networks](https://github.com/
+* [Pointer Networks](https://github.com/shiretzet/PointerNet/blob/master/PointerNet.py)
